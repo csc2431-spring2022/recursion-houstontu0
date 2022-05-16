@@ -84,14 +84,21 @@ int main() {
 	return 0;
 }
 
-unsigned long long int Fibonacci(unsigned int n){
-	return 0;
+unsigned long long int Fibonacci(unsigned int n) {
+    if (n <= 1)
+        return n;
+    return Fibonacci(n - 1) + Fibonacci(n - 2);
+    return 0;
 }
-void PrintReverseString(const string& str, ostream& output){
+void PrintReverseString(const string& str, ostream& output) {
+    if (str.size() == 0) {
+        return;
+    }
+    PrintReverseString(str.substr(1));
+    cout << str[0];
 }
 // You may change the parameters of these functions
 size_t MinimumPosition(const int array[], size_t size){
-	return 0;
 }
 void SelectionSort(int array[], size_t size){
 
